@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="author" content="Jane Alise Maypa">
+    <meta name="description" content="A simple Todo List application with user registration and login functionality.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 for better alerts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.all.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container" id="registrationSection">
+        <h2><i class="fas fa-user-plus"></i> User Registration</h2>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="regUsername" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="regPassword" placeholder="Password">
+        </div>
+        <button onclick="registerUser()"><i class="fas fa-sign-in-alt"></i> Register</button>
+        <p>Already have an account? <a href="#" onclick="showLoginSection()">Login</a></p>
+    </div>
+
+    <div class="container" id="loginSection">
+        <h2><i class="fas fa-sign-in-alt"></i> User Login</h2>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="loginUsername" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Password">
+        </div>
+        <button onclick="loginUser()"><i class="fas fa-door-open"></i> Login</button>
+        <p>Don't have an account? <a href="#" onclick="showRegistrationSection()">Register</a></p>
+    </div>
+
+    <div class="container_1" id="todoSection">
+        <h2><i class="fas fa-tasks"></i> Todo List</h2>
+        <div class="add-todo-group">
+            <input type="text" id="todoInput" placeholder="Enter a new task">
+            <button onclick="addTodo()"><i class="fas fa-plus"></i></button>
+        </div>
+        <ul id="todoList" class="todo-list"></ul>
+        <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+</body>
+
+</html>
